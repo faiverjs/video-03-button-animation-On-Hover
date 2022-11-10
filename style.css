@@ -1,0 +1,105 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	font-size: 30px;
+	
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #111E6c
+}
+a
+{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	margin: 15px 10px;
+	background-color: #222;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+a::before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 300px;
+	width: 4px;
+	height: 100%;
+	background: #00fe73;
+	transition: 0.5s ease-in-out;
+	transition-delay: .5s; 
+}
+a::after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 4px;
+	height: 100%;
+	background: #00fe73;
+	transition: 0.12s ease-in-out; 
+	transition-delay: .5s; 
+}
+a:nth-child(2)::before,
+a:nth-child(2)::after
+{
+	background: #fe1a6f
+}
+
+a:hover::before
+{
+	width: 100%;
+	transition-delay: .5s; 
+}
+a:hover::after
+{
+	width: 100%;
+	transition-delay: .5s; 
+}
+a samp
+{
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+	font-size: 18px;
+	transition: 0.5s;
+}
+a samp:nth-child(1)
+{
+	transition-delay: 0.75s;
+	opacity: 0;
+}
+a:hover samp:nth-child(1)
+{
+	transform: scale(3);
+	opacity: 1;
+	transition-delay: 0s;
+}
+a samp:nth-child(2)
+{
+	transform: scale(1);
+	transition-delay: 0s;
+	opacity: 0;
+	z-index: 10;
+	
+}
+a:hover samp:nth-child(2)
+{
+	opacity: 0;
+	transform: scale(1);
+	transition-delay: 0s;
+	z-index: 10;
+	transition-delay: 0.5S;
+}
